@@ -16,10 +16,16 @@ This repository contains a unified architecture trained under two input feature 
 This step is used to estimate the generalization performance of the model.
 #### Model Training
 The original data ```./Datasets/Substrate_ec_species data/Original_data.csv``` was partitioned into 5 subsets. For each fold, four subsets together with their corresponding synthetic instances were used for training, and the remaining subset of the original data was used for evaluation.
-#### Trained models
+#### Trained Models
 The 5-fold cross-validation checkpoints for the multi-species substrate model are available in ```./Trained models/General models/Substrate_model_5_fold_cv/```.
 
 ### Final Deployed Model
+This model is trained on the full set of original data and all synthetic data, and is used as the final deployed model for multi-species kcat prediction.
+#### Model Training
+
+#### Trained Model
+
+#### kcat Prediction Using the Trained model
 
 
 ## Human-Specialist kcat Prediction (Substrate-EC-Species As Input)
