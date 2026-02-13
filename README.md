@@ -10,3 +10,15 @@ This repository contains a unified architecture trained under two input feature 
 4. sklearn 1.0.2
 5. scipy 1.5.3
 6. CUDA 11.1
+
+## Multi-Species Kcat Prediction (Substrate-EC-Species As Input)
+### 5-Fold Cross-Validation Evaluation
+
+### Final Deployed Model
+
+
+## Human-Specialist kcat Prediction (Substrate-EC-Species As Input)
+
+## Multi-Species Kcat Prediction (Product-EC-Species As Input)
+
+## Human-Specialist kcat Prediction (Product-EC-Species As Input)
