@@ -1,5 +1,7 @@
 # AUKCAT-Neural-Network-Model-for-Kcat-Prediction
-This neural network is designed to predict enzyme turnover numbers (kcat) from triplet features: substrate, EC number, and species, using both the original experimental dataset and high-confidence pseudo-labeled data selected via the AUKCAT-Data-Selection-Pipeline.
+AUKCAT NN model is a neural network–based framework designed to predict enzyme turnover numbers (kcat) from structured biochemical features. The model takes as input a triplet of features representing either the substrate (or product), enzyme EC number, and species, and outputs predicted kcat values.
+
+This repository contains a unified architecture trained under two input feature modes and two training strategies, resulting in four variants of the model.
 
 ## Dependencies
 1. pytorch 1.10.0
@@ -8,3 +10,19 @@ This neural network is designed to predict enzyme turnover numbers (kcat) from t
 4. sklearn 1.0.2
 5. scipy 1.5.3
 6. CUDA 11.1
+
+## Multi-Species Kcat Prediction (Substrate-EC-Species As Input)
+### 5-Fold Cross-Validation Evaluation
+This step is used to estimate the generalization performance of the model.
+#### Model Training
+#### Trained models
+
+
+### Final Deployed Model
+
+
+## Human-Specialist kcat Prediction (Substrate-EC-Species As Input)
+
+## Multi-Species Kcat Prediction (Product-EC-Species As Input)
+
+## Human-Specialist kcat Prediction (Product-EC-Species As Input)
