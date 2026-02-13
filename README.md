@@ -15,8 +15,9 @@ This repository contains a unified architecture trained under two input feature 
 ### 5-Fold Cross-Validation Evaluation
 This step is used to estimate the generalization performance of the model.
 #### Model Training
+The original data ```./Datasets/Substrate_ec_species data/Original_data.csv``` was partitioned into 5 subsets. For each fold, four subsets together with their corresponding synthetic instances were used for training, and the remaining subset of the original data was used for evaluation.
 #### Trained models
-
+The 5-fold cross-validation checkpoints for the multi-species substrate model are available in ```./Trained models/General models/Substrate_model_5_fold_cv/```.
 
 ### Final Deployed Model
 
