@@ -25,7 +25,7 @@ This model is trained on the full set of original data and all synthetic data, a
 
 #### Trained Model
 
-#### kcat Prediction Using the Trained model
+#### Kcat Prediction Using the Trained model
 
 
 ## Human-Specialist kcat Prediction (Substrate-EC-Species As Input)
