@@ -30,6 +30,7 @@ To predict the kcat from your data, simply run
   --ckpt ./Trained_models/General_models/Substrate_model.pth \
   --input ./example_data/unseen.csv \
   --out predictions.csv```
+where ```--ckpt``` specifies the path to the trained model checkpoint, ```--input``` specifies the path to the CSV file for prediction (which must contain the required feature columns), and ```--out``` specifies the name of the output prediction file.
 
 ## Human-Specialist kcat Prediction (Substrate-EC-Species As Input)
 
