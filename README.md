@@ -32,6 +32,8 @@ To predict the kcat from your data, simply run
 
 where ```--ckpt``` specifies the path to the trained model checkpoint, ```--input``` specifies the path to the CSV file for prediction (which must contain the required feature columns), and ```--out``` specifies the name of the output prediction file. The output results will be saved under ```./Results``` directory.
 
+#### Simple Example
+
 ## Human-Specialist kcat Prediction (Substrate-EC-Species As Input)
 
 ## Multi-Species Kcat Prediction (Product-EC-Species As Input)
