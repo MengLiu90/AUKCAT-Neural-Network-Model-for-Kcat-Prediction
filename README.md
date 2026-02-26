@@ -26,12 +26,7 @@ This model is trained on the full set of original data and all synthetic data, a
 The trained multi-species kcat prediction model with substrate–EC–species inputs is available at ```./Trained_models/General_models/Substrate_model.pth```.
 #### Kcat Prediction Using the Trained model
 To predict the kcat from your data, simply run 
-```python predict_kcat.py \
-  --ckpt ./Trained_models/General_models/Substrate_model.pth \
-  --input ./example_data/unseen.csv \
-  --out predictions.csv```
-
-
+```python predict_kcat.py --ckpt model.pth --input data.csv --out pred.csv```
 where ```--ckpt``` specifies the path to the trained model checkpoint, ```--input``` specifies the path to the CSV file for prediction (which must contain the required feature columns), and ```--out``` specifies the name of the output prediction file.
 
 ## Human-Specialist kcat Prediction (Substrate-EC-Species As Input)
