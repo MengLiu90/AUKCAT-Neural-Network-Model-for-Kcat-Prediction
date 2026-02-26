@@ -21,12 +21,15 @@ The 5-fold cross-validation checkpoints for the multi-species substrate model ar
 
 ### Final Deployed Model
 This model is trained on the full set of original data and all synthetic data, and is used as the final deployed model for multi-species kcat prediction.
-#### Model Training
 
 #### Trained Model
-
+The trained multi-species kcat prediction model with substrate–EC–species inputs is available at ```./Trained_models/General_models/Substrate_model.pth```.
 #### Kcat Prediction Using the Trained model
-
+To predict the kcat from your data, simply run 
+```python predict_kcat.py \
+  --ckpt ./Trained_models/General_models/Substrate_model.pth \
+  --input ./example_data/unseen.csv \
+  --out predictions.csv```
 
 ## Human-Specialist kcat Prediction (Substrate-EC-Species As Input)
 
