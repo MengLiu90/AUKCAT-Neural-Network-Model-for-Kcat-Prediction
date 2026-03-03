@@ -46,7 +46,7 @@ Run ```python predict_kcat.py --ckpt ./Trained_models/General_models/Substrate_m
 
 ### Remark
 The required feature columns for a successful prediction includes
-1. Molecular feature embedding for the motabolite (either substrate or product, depending on the model you want to use)
+1. Molecular feature embedding for the metabolite (either substrate or product, depending on the model you want to use)
 
    This feature embedding can be obtained through [Mol2Vec](https://github.com/samoturk/mol2vec)
 3. EC number embedding
@@ -55,3 +55,5 @@ The required feature columns for a successful prediction includes
 5. Species embedding
 
    This feature embedding can be obtained using Node2Vec.
+
+The feature embeddings should be concatenated in the order of metabolite-EC number-species to construct the input to the model.
