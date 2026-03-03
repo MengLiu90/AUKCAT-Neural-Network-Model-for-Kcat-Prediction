@@ -50,13 +50,12 @@ This model is specifically trained for human kcat prediction. The trained model 
 
 To run this model for human kcat prediction, simply run 
 
-```python predict_kcat.py \```
-
-```--ckpt ./Trained_models/Human-specialist_models/Substrate_model_for_human_kcat_prediction.pth \```
-
-```--input your_data_path/your_data.csv --out pred_human_kcat.csv```
+```python predict_kcat.py --ckpt ./Trained_models/Human-specialist_models/Substrate_model_for_human_kcat_prediction.pth --input your_data_path/your_data.csv --out pred_human_kcat_substrate_based.csv```
 
 This model takes substrate embedding, EC number embedding, and human species embedding as input features.
+
+The predicted kcat values will be saved in the ```Results``` directory as ```pred_human_kcat_substrate_based.csv```.
+
 ## Multi-Species Kcat Prediction (Product-EC-Species As Input)
 
 ## Human-Specialist kcat Prediction (Product-EC-Species As Input)
