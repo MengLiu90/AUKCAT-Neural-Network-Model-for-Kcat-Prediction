@@ -38,8 +38,11 @@ Here, we provide a simple example demonstrating how to use the model for kcat pr
 Run ```python predict_kcat.py --ckpt ./Trained_models/General_models/Substrate_model.pth --input ./Datasets/Substrate_ec_species_data/Embedded_original_data_example.csv --out pred_substrate_example.csv```
 
 After running this command, the program will output evaluation metrics such as:
+
 ```AvgLoss=0.358112  MSE=0.358112  R2=0.7413  Pearson=0.8869```
+
 ```Saved predictions → Results/pred_substrate_example.csv```
+
 The predicted kcat values will be saved in the ```Results``` directory as ```pred_substrate_example.csv```.
 
 ## Human-Specialist kcat Prediction (Substrate-EC-Species As Input)
