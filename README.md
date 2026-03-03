@@ -13,7 +13,7 @@ This repository contains a unified architecture trained under two input feature 
 
 ## Multi-Species Kcat Prediction (Substrate-EC-Species As Input)
 ### 5-Fold Cross-Validation Evaluation
-This step is used to estimate the generalization performance of the model.
+This step is used to assess the generalization performance of the model.
 #### Model Training
 The original data ```./Datasets/Substrate_ec_species data/Original_data.csv``` was partitioned into 5 subsets. For each fold, four subsets together with their corresponding synthetic instances were used for training, and the remaining subset of the original data was used for evaluation.
 #### Trained Models
