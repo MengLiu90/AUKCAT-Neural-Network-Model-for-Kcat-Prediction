@@ -35,9 +35,18 @@ where ```--ckpt``` specifies the path to the trained model checkpoint, ```--inpu
 #### Simple Example
 Here, we provide a simple example demonstrating how to use the model for kcat prediction.
 
-Run ```python predict_kcat.py --ckpt ./Trained_models/General_models/Substrate_model.pth --input "Datasets/Substrate_ec_species data/Embedded_original_data_example.csv" --out pred_substrate_example.csv```
+Run ```python predict_kcat.py --ckpt ./Trained_models/General_models/Substrate_model.pth --input ./Datasets/Substrate_ec_species_data/Embedded_original_data_example.csv --out pred_substrate_example.csv```
+
+After running this command, the program outputs the following evaluation metrics (if the input data contains kcat labels; otherwise, only the predicted kcat values are generated):
+
+```AvgLoss=0.358112  MSE=0.358112  R2=0.7413  Pearson=0.8869```
+
+```Saved predictions → Results/pred_substrate_example.csv```
+
+The predicted kcat values are saved in the ```Results``` directory as ```pred_substrate_example.csv```.
 
 ## Human-Specialist kcat Prediction (Substrate-EC-Species As Input)
+
 
 ## Multi-Species Kcat Prediction (Product-EC-Species As Input)
 
