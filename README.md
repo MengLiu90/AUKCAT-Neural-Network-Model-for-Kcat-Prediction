@@ -105,6 +105,9 @@ This model takes product embedding, EC number embedding, and human species embed
 
 The predicted kcat values will be saved in the ```Results``` directory as ```pred_human_kcat_product_based.csv```.
 
+## Train the Model on Your Data
+To train the model on your data, 
+
 ### Remark
 The required feature columns for a successful prediction includes
 1. Molecular feature embedding for the metabolite (either substrate or product, depending on the model you want to use)
