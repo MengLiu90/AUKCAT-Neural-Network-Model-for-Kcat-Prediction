@@ -95,7 +95,15 @@ After running this command, the program outputs the following evaluation metrics
 The predicted kcat values are saved in the ```Results``` directory as ```pred_product_example.csv```.
 
 ## Human-Specialist kcat Prediction (Product-EC-Species As Input)
+This model is specifically trained for human kcat prediction. The trained model is available at ```./Trained_models/Human-specialist_models/Product_model_for_human_kcat_prediction.pth```
 
+To run this model for human kcat prediction, simply run 
+
+```python predict_kcat.py --ckpt ./Trained_models/Human-specialist_models/Product_model_for_human_kcat_prediction.pth --input your_data_path/your_data.csv --out pred_human_kcat_product_based.csv```
+
+This model takes product embedding, EC number embedding, and human species embedding as input features.
+
+The predicted kcat values will be saved in the ```Results``` directory as ```pred_human_kcat_product_based.csv```.
 
 ### Remark
 The required feature columns for a successful prediction includes
