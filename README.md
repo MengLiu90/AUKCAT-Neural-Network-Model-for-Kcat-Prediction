@@ -88,7 +88,7 @@ Run ```python predict_kcat.py --ckpt ./Trained_models/General_models/Product_mod
 
 After running this command, the program outputs the following evaluation metrics (if the input data contains kcat labels; otherwise, only the predicted kcat values are generated):
 
-```AvgLoss=0.358112  MSE=0.358112  R2=0.7413  Pearson=0.8869```
+```AvgLoss=0.084256  MSE=0.084256  R2=0.1701  Pearson=0.9553```
 
 ```Saved predictions → Results/pred_product_example.csv```
 
