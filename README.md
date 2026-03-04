@@ -19,15 +19,15 @@ This repository contains a unified architecture trained under two input feature 
 ### 5-Fold Cross-Validation Evaluation
 This step is used to assess the generalization performance of the model.
 #### Model Training
-The original data ```./Datasets/Substrate_ec_species data/Original_data.csv``` was partitioned into 5 subsets. For each fold, four subsets together with their corresponding synthetic instances were used for training, and the remaining subset of the original data was used for evaluation.
+The original substrate data ```./Datasets/Substrate_ec_species_data/Original_data.csv``` was partitioned into 5 subsets. For each fold, four subsets together with their corresponding synthetic instances were used for training, and the remaining subset of the original data was used for evaluation.
 #### Trained Models
-The 5-fold cross-validation checkpoints for the multi-species substrate model are available in ```./Trained models/General models/Substrate_model_5_fold_cv/```.
+The 5-fold cross-validation checkpoints for the multi-species substrate model are available in ```./Trained_models/General_models/Substrate_model_5_fold_cv/```.
 
 ### Final Deployed Model
-This model is trained on the full set of original data and all synthetic data, and is used as the final deployed model for multi-species kcat prediction.
+This model is trained on the full set of original substrate data and all synthetic substrate data, and is used as the final deployed model for multi-species kcat prediction.
 
 #### Trained Model
-The trained multi-species kcat prediction model with substrate–EC–species inputs is available at ```./Trained_models/General_models/Substrate_model.pth```.
+The trained multi-species kcat prediction model with substrate–EC–species as inputs is available at ```./Trained_models/General_models/Substrate_model.pth```.
 #### Kcat Prediction Using the Trained model
 To predict the kcat from your data, simply run 
 
@@ -61,6 +61,38 @@ This model takes substrate embedding, EC number embedding, and human species emb
 The predicted kcat values will be saved in the ```Results``` directory as ```pred_human_kcat_substrate_based.csv```.
 
 ## Multi-Species Kcat Prediction (Product-EC-Species As Input)
+### 5-Fold Cross-Validation Evaluation
+This step is used to assess the generalization performance of the model.
+#### Model Training
+The original product data ```./Datasets/Product_ec_species data/Original_data.csv``` was partitioned into 5 subsets. For each fold, four subsets together with their corresponding synthetic instances were used for training, and the remaining subset of the original data was used for evaluation.
+#### Trained Models
+The 5-fold cross-validation checkpoints for the multi-species product model are available in ```./Trained_models/General_models/Product_model_5_fold_cv/```.
+
+### Final Deployed Model
+This model is trained on the full set of original product data and all synthetic product data, and is used as the final deployed model for multi-species kcat prediction.
+
+#### Trained Model
+The trained multi-species kcat prediction model with product–EC–species as inputs is available at ```./Trained_models/General_models/Product_model.pth```.
+#### Kcat Prediction Using the Trained model
+To predict the kcat from your data, simply run 
+
+```python predict_kcat.py --ckpt model.pth --input data.csv --out pred.csv```
+
+
+where ```--ckpt``` specifies the path to the trained model checkpoint, ```--input``` specifies the path to the CSV file for prediction (which must contain the required feature columns), and ```--out``` specifies the name of the output prediction file. The output results will be saved under ```./Results``` directory.
+
+#### Simple Example
+Here, we provide a simple example demonstrating how to use the model for kcat prediction.
+
+Run ```python predict_kcat.py --ckpt ./Trained_models/General_models/Product_model.pth --input ./Datasets/Product_ec_species_data/Embedded_original_data_example.csv --out pred_product_example.csv```
+
+After running this command, the program outputs the following evaluation metrics (if the input data contains kcat labels; otherwise, only the predicted kcat values are generated):
+
+```AvgLoss=0.358112  MSE=0.358112  R2=0.7413  Pearson=0.8869```
+
+```Saved predictions → Results/pred_product_example.csv```
+
+The predicted kcat values are saved in the ```Results``` directory as ```pred_product_example.csv```.
 
 ## Human-Specialist kcat Prediction (Product-EC-Species As Input)
 
