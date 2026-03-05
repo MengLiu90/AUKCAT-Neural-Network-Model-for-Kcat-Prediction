@@ -117,11 +117,11 @@ It will report the evaluation metrics (MSE, R², and Pearson correlation) on the
 The required feature columns for a successful prediction includes
 1. Molecular feature embedding for the metabolite (either substrate or product, depending on the model you want to use)
 
-   This feature embedding can be obtained through [Mol2Vec](https://github.com/samoturk/mol2vec)
-3. EC number embedding
+   This feature embedding can be obtained through [Mol2Vec](https://github.com/samoturk/mol2vec).
+2. EC number embedding
 
-   This feature embedding can be obtained via [EC2Vec](https://github.com/MengLiu90/EC2Vec)
-5. Species embedding
+   This feature embedding can be obtained via [EC2Vec](https://github.com/MengLiu90/EC2Vec).
+3. Species embedding
 
    This feature embedding can be obtained using Node2Vec.
 
