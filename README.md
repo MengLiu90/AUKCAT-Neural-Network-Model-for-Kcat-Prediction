@@ -106,7 +106,12 @@ This model takes product embedding, EC number embedding, and human species embed
 The predicted kcat values will be saved in the ```Results``` directory as ```pred_human_kcat_product_based.csv```.
 
 ## Train the Model on Your Data
-To train the model on your data, 
+To train the model on your data, simply run
+
+```python train.py --data_csv your_data.csv --epochs 500```
+
+It will report the evaluation metrics (MSE, R², and Pearson correlation) on the validation set. After training, the best-performing model checkpoint will be saved to:
+```saved_NN_models/best_model.pth``` 
 
 ### Remark
 The required feature columns for a successful prediction includes
