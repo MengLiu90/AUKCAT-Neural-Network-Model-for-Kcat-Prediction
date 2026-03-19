@@ -126,3 +126,11 @@ The required feature columns for a successful prediction includes
    This feature embedding can be obtained using Node2Vec.
 
 The feature embeddings should be concatenated in the order of metabolite-EC number-species to construct the input to the model.
+
+
+## Related Repositories
+This repository serves as the main implementation of the AUKCAT framework for kcat prediction. The full AUKCAT framework consists of three components:
+- AUKCAT Neural Network Model (this repository)
+Predicts enzyme turnover numbers (kcat) from substrate, EC number, and species features using both experimental and augmented data.
+AUKCAT-CVAE
+A conditional variational autoencoder designed to generate high-quality synthetic embeddings conditioned on substrate and EC context. 
