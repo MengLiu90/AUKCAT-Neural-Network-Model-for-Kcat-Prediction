@@ -131,10 +131,15 @@ The feature embeddings should be concatenated in the order of metabolite-EC numb
 ## Related Repositories
 This repository serves as the main implementation of the AUKCAT framework for kcat prediction. The full AUKCAT framework consists of three components:
 - AUKCAT Neural Network Model (this repository)
+
   Predicts enzyme turnover numbers (kcat) from substrate (or product), EC number, and species features using both experimental and augmented data.
 - AUKCAT-CVAE
+
   A conditional variational autoencoder designed to generate high-quality synthetic embeddings conditioned on substrate and EC context.
+
   🔗[GitHub Repository](https://github.com/MengLiu90/AUKCAT-CVAE)
 - AUKCAT Data Selection Pipeline
+
   An iterative pipeline that selects high-confidence synthetic instances from CVAE-generated data.
+
   🔗[GitHub Repository](https://github.com/MengLiu90/AUKCAT-Data-Selection-Pipeline)
