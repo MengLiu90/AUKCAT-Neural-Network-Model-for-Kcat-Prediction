@@ -108,7 +108,7 @@ def parse_args():
     p.add_argument("--val_ratio", type=float, default=0.2)
     p.add_argument("--seed", type=int, default=42)
 
-    p.add_argument("--epochs", type=int, default=500)
+    p.add_argument("--epochs", type=int, default=300)
     p.add_argument("--batch_size", type=int, default=32)
     p.add_argument("--lr", type=float, default=2e-4)
     p.add_argument("--weight_decay", type=float, default=5e-3)
