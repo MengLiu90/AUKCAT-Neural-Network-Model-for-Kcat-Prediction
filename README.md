@@ -108,7 +108,7 @@ The predicted kcat values will be saved in the ```Results``` directory as ```pre
 ## Train the Model on Your Data
 To train the model on your data, simply run
 
-```python train.py --data_csv your_data.csv --epochs 500```
+```python train.py --data_csv your_data.csv --epochs 300```
 
 It will report the evaluation metrics (MSE, R², and Pearson correlation) on the validation set. After training, the best-performing model checkpoint will be saved to:
 ```saved_NN_models/best_model.pth``` 
